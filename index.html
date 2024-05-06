@@ -4,17 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="responsive.css">
     <title>Validador de formulários</title>
     <section class="contain-form">
        <div class="formulario">
-            <div class="left-form">
-
+            <div class="title-form">
+                <h2>Formulário de cadastro</h2>
             </div>
-
-            <div class="right-form">
-
+            <div class="lista">
+                <ul>
+                    <li>Nenhum campo pode estar vazio.</li>
+                    <li>Usuário só poderá conter letras e/ou números.</li>
+                    <li>Usuário deverá ter entre 3 e 12 caracteres.</li>
+                    <li>Senha precisa ter entre 3 e 12 caracteres.</li>
+                </ul>
             </div>
+            <form action="index.js" method="post" autocomplete="on">
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" placeholder="Nome">
+
+                <label for="isobrenome">Sobreome: </label>
+                <input type="text" name="sobrenome" id="isobrenome" placeholder="Sobrenome">
+
+                <label for="icpf">CPF: </label>
+                <input type="text" name="cpf" id="icpf" placeholder="CPF">
+
+                <label for="iuser">Usuário: </label>
+                <input type="text" name="user" id="iuser" placeholder="Usuário">
+
+                <label for="isenha">Senha: </label>
+                <input type="text" name="senha" id="isenha" placeholder="Senha">
+
+                <label for="irepsenha">Repetir senha: </label>
+                <input type="text" name="repsenha" id="irepsenha" placeholder="Repetir senha">
+
+                <input type="button" value="Enviar" class="btn">
+            </form>
        </div> 
     </section>
 </head>

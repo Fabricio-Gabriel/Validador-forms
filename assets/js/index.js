@@ -9,12 +9,18 @@ class ValidaForm {
         this.formulario.addEventListener('submit', (e) => {
             this.handleSubmit(e);
         });
+        
     }
 
     handleSubmit(event) {
         event.preventDefault();
         const campoValido = this.isValid();
         const senhasValidas = this.validaSenha();
+
+        if (campoValido && senhasValidas) {
+            alert('formulário enviado');
+            this.formulario.submit();
+        }
     }
 
     validaSenha() {
@@ -29,8 +35,9 @@ class ValidaForm {
             valid = false
         }
 
-        if (senha.length < 6 || senha.length > 12) {
-            this.criaErro(senha, "Senha precisa ter entre 6 e/ou 12 caracteres.")
+        if (senha.value.length < 6 || senha.value.length > 12) {
+            this.criaErro(senha, "Senha precisa ter entre 6 e/ou 12 caracteres.");
+            this.criaErro(repeteSenha, "Senha precisa ter entre 6 e/ou 12 caracteres.");
             valid = false;
         }
 

@@ -89,4 +89,7 @@ input {
     cursor: pointer;
 }
 
-
+.erro-text {
+    color: #e43535;
+    font-size: 1.2rem;
+}
